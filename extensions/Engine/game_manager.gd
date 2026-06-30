@@ -5,6 +5,12 @@ var ap_save_file_path = "user://ap_save/"
 func _ready():
 	save_file_path = ap_save_file_path
 	super()
+	
+func create_save_file():
+	super()
+	first_map_part_unlocked = true
+	first_half_map_part_unlocked =	true 
+	second_half_map_part_unlocked =	true 
 
 func save_game():
 	save_file_path = ap_save_file_path
