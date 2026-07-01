@@ -40,4 +40,4 @@ func create_statistics_file():
 	
 func has_statistics_file():
 	save_file_path = ap_save_file_path
-	super()
+	return super()
