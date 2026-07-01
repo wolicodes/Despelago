@@ -12,17 +12,16 @@ func _init() -> void:
 	ModLoaderLog.info("Init", DESPELAGO_LOG_NAME)
 	mod_dir_path = ModLoaderMod.get_unpacked_dir().path_join(DESPELAGO_MOD_DIR)
 	install_script_extensions()
+	install_script_hook_files()
 
 
 func install_script_extensions() -> void:
 	extensions_dir_path = mod_dir_path.path_join("extensions")
-	
-	# Use a different save file location for AP
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Engine/game_manager.gd"))
-	
-	# Disable achievements
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Engine/achievements/achievements_manager.gd"))
 
+func install_script_hook_files() -> void:
+	ModLoaderMod.install_script_hooks("res://Engine/room_manager.gd", "res://mods-unpacked/Woli-Despelago/extensions/Engine/room_manager.hooks.gd")
 
 func _ready() -> void:
 	ModLoaderLog.info("Ready", DESPELAGO_LOG_NAME)
