@@ -19,6 +19,8 @@ func install_script_extensions() -> void:
 	extensions_dir_path = mod_dir_path.path_join("extensions")
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Engine/game_manager.gd"))
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Engine/achievements/achievements_manager.gd"))
+	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Components/bonus_light.gd"))
+	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Components/bonus_collectable.gd"))
 
 func install_script_hook_files() -> void:
 	ModLoaderMod.install_script_hooks("res://Engine/room_manager.gd", "res://mods-unpacked/Woli-Despelago/extensions/Engine/room_manager.hooks.gd")
