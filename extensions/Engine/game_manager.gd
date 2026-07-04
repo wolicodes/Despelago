@@ -1,11 +1,13 @@
 extends "res://Engine/game_manager.gd"
 
+# MOD use a different path for save files
 var ap_save_file_path = "user://ap_save/"
 
 func _ready():
 	save_file_path = ap_save_file_path
 	super()
 	
+# MOD remove the map and half map tutorials
 func create_save_file():
 	super()
 	first_map_part_unlocked = true
@@ -20,6 +22,7 @@ func load_game():
 	save_file_path = ap_save_file_path
 	super()
 		
+# MOD also use the modified save path when clearing the save file on new game
 func clear_save_file():
 	if ResourceLoader.exists(ap_save_file_path + save_file_name):
 		print("resetting save file")

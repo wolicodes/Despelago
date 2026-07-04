@@ -1,5 +1,6 @@
 extends Object
 
+# MOD remove floating tutorial windows
 func _ready(chain: ModLoaderHookChain) -> void:
 	var main_node := chain.reference_object as Room
 	var tutorial = main_node.get_node_or_null("Tutorial")

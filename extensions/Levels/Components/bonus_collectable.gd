@@ -5,7 +5,7 @@ func pickup():
 	$SFX.play()
 	$CollectedParticles.emitting = true
 	is_pickedup = true
-	# MOD DIFF: remove dialog on first bonnie collectible
+	# MOD remove dialog on first bonnie collectible
 	#if is_first_collectable:
 		#dialog_instance.next()
 	collectable_icon_instance = collectable_icon_scene.instantiate()

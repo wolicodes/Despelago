@@ -6,7 +6,7 @@ func show_light():
 		$AnimationPlayer.play("appear")
 		collectable.enable(true)
 		particles.emitting = true
-		# MOD DIFF: remove dialog on first bonnie collectible
+		# MOD remove dialog on first bonnie collectible
 		#if collectable.is_first_collectable:
 			#collectable.dialog_instance.start()
 	else:
