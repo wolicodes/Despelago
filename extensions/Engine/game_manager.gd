@@ -7,12 +7,17 @@ func _ready():
 	save_file_path = ap_save_file_path
 	super()
 	
-# MOD remove the map and half map tutorials
 func create_save_file():
 	super()
+	# MOD remove the map tutorials
 	first_map_part_unlocked = true
 	first_half_map_part_unlocked =	true 
 	second_half_map_part_unlocked =	true 
+	# MOD unlock all the stages
+	var current_stages_data = StageManager.get_current_stages_data()
+	for stage in current_stages_data.stages:
+		stage.unlocked = true
+		stage.necessary_zones = []
 
 func save_game():
 	save_file_path = ap_save_file_path
