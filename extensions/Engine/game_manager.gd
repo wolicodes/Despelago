@@ -2,10 +2,15 @@ extends "res://Engine/game_manager.gd"
 
 # MOD use a different path for save files
 var ap_save_file_path = "user://ap_save/"
+signal single_keys_unlocked
 
 func _ready():
 	save_file_path = ap_save_file_path
+	Console.add_command("skey", unlock_single_keys)
 	super()
+	
+func unlock_single_keys():
+	single_keys_unlocked.emit()
 	
 func create_save_file():
 	super()
