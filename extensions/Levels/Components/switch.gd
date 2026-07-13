@@ -10,7 +10,7 @@ func _ready():
 
 	# All switches (single/double keys, ghost) use this script,
 	# we need to differenciate
-	if self.name.begins_with("SwitchGhost"):
+	if scene_file_path.get_file() == "switch_ghost.tscn":
 		_kind = GameManager.Unlockable.GHOST_SWITCHES
 	elif is_double_key():
 		_kind = GameManager.Unlockable.DOUBLE_KEYS
