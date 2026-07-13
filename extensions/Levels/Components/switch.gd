@@ -34,7 +34,8 @@ func is_double_key() -> bool:
 	for other in self.get_parent().get_children():
 		if other == self:
 			continue
-		if other.global_position == self.global_position:
+		if other.name.begins_with("Switch") \
+		and other.global_position == self.global_position:
 			return true
 	return false
 
