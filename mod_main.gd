@@ -22,6 +22,7 @@ func install_script_extensions() -> void:
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Components/bonus_light.gd"))
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Components/bonus_collectable.gd"))
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Components/switch.gd"))
+	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Components/ghost_wall.gd"))
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Content/cinematic_intro.gd"))
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Engine/level_manager.gd"))
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Engine/hud_controller.gd"))
