@@ -28,6 +28,7 @@ func install_script_extensions() -> void:
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Components/switch.gd"))
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Components/ghost_wall.gd"))
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Components/lamp_chandelier.gd"))
+	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Menus/Map/map_node.gd"))
 	
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Content/cinematic_intro.gd"))
 
