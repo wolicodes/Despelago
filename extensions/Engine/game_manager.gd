@@ -27,7 +27,7 @@ func unlock_ghost_walls():    unlock_ability(Unlockable.GHOST_WALLS)
 func unlock_chandeliers():    unlock_ability(Unlockable.CHANDELIERS)
 
 func unlock_ability(which: Unlockable):
-	if unlocked.get(which, false):
+	if is_unlocked(which):
 		return
 	unlocked[which] = true
 	ability_unlocked.emit(which)

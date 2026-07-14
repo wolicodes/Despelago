@@ -8,7 +8,7 @@ var ghost_walls = GameManager.Unlockable.GHOST_WALLS
 func _ready():
 	super()
 	GameManager.ability_unlocked.connect(on_ability_unlocked)
-	if not GameManager.unlocked.get(ghost_walls, false):
+	if not GameManager.is_unlocked(ghost_walls):
 		# Collision layer 7 allows the player to dash through
 		# (special for ghost walls)
 		# Collision layer 1 is just regular walls, so we disable
