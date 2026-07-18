@@ -1,5 +1,6 @@
 extends "res://Levels/Menus/Map/map_node.gd"
 
+# MOD disable map animations on first map opening
 func update_node(unlocked_state, necessary_stages_won, won_state, new_playtime):
 	unlocked = unlocked_state
 	if unlocked:

@@ -5,10 +5,12 @@ const DESPELAGO_LOG_NAME := "Woli-Despelago:Main"
 
 var mod_dir_path := ""
 var extensions_dir_path := ""
+var overrides
 
 func _init() -> void:
 	ModLoaderLog.info("Init", DESPELAGO_LOG_NAME)
 	mod_dir_path = ModLoaderMod.get_unpacked_dir().path_join(DESPELAGO_MOD_DIR)
+	overrides = load("res://mods-unpacked/Woli-Despelago/overwrites.gd").new()
 	install_script_extensions()
 	install_script_hook_files()
 
@@ -27,6 +29,7 @@ func install_script_extensions() -> void:
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Components/lamp_chandelier.gd"))
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Menus/Map/map_node.gd"))
 	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Components/bonus_invite_balloon.gd"))
+	ModLoaderMod.install_script_extension(extensions_dir_path.path_join("Levels/Components/map_part.gd"))
 
 
 func install_script_hook_files() -> void:
